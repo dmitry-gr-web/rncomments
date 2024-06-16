@@ -8,6 +8,7 @@ import LoginScreen from './src/views/LoginScreen';
 import { StatusBar } from 'react-native';
 import CommentsScreen from './src/views/CommentsScreen';
 import AddCommentScreen from './src/views/AddCommentScreen';
+import { LightTheme, DarkTheme } from './src/utils/constants';
 const StackNavigator = createNativeStackNavigator();
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
   return (
     <>
       <StatusBar backgroundColor="white"/>
-      <NavigationContainer>
+      <NavigationContainer theme={LightTheme}>
         <StackNavigator.Navigator initialRouteName="comments" screenOptions={{}}>
           <StackNavigator.Screen name="login" component={LoginScreen} options={{ headerShown: false }} />
           <StackNavigator.Screen name="comments" component={CommentsScreen} options={{ headerShown: false }} />

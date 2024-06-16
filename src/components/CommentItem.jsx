@@ -11,7 +11,6 @@ import React from 'react';
 export default function CommentItem() {
   return (
     <View>
-
       <View style={styles.header}>
         <View style={styles.img}></View>
         <Text>CommentItem</Text>
@@ -25,8 +24,8 @@ export default function CommentItem() {
           inventore! Corporis dolorem nulla quam.
         </Text>
       </View>
-      <TouchableOpacity style={{backgroundColor: 'red'}}>
-        <Text>Ответить</Text>
+      <TouchableOpacity style={{backgroundColor: 'red',margin:'auto'}}>
+        <Text style={{padding:10}}>Ответить</Text>
       </TouchableOpacity>
     </View>
   );
@@ -36,7 +35,7 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#06daf6',
     flexDirection: 'row',
-    borderRadius: 10,
+    alignItems:'center'
   },
   img: {
     backgroundColor: 'pink',
