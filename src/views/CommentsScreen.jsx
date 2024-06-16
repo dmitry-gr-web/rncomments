@@ -33,7 +33,9 @@ export default function CommentsScreen({navigation}) {
         <Text>Email</Text>
         <Text>Date</Text>
       </View>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => {
+            navigation.navigate('addComment');
+      }}>
         <SvgComponent style={{transform: [{rotate: '45deg'}]}} />
       </TouchableOpacity>
       {/* <Text style={styles2.title}>Comments</Text>
