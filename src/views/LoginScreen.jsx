@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
-import { useRouter } from 'expo-router';
-
-export default function LoginScreen() {
+import {useState} from 'react';
+export default function LoginScreen({navigation}) {
   const [username, setUsername] = useState('');
-  const router = useRouter();
 
   const handleLogin = () => {
     if (username.trim()) {
-      router.push('/comments');
+      navigation.navigate('comments');
     }
   };
 

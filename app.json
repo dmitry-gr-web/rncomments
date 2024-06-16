@@ -1,8 +1,5 @@
 {
   "name": "rncomments",
   "displayName": "rncomments",
-  "scheme": "your-app-scheme",
-  "plugins": [
-    "expo-router"
-  ]
+  "scheme": "your-app-scheme"
 }

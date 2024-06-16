@@ -1,21 +1,18 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
-import { useRouter } from 'expo-router';
-
-export default function AddCommentScreen() {
+import {View, Text, TextInput, Button, StyleSheet} from 'react-native';
+import {useState} from 'react';
+export default function AddCommentScreen({navigation}) {
   const [comment, setComment] = useState('');
-  const router = useRouter();
 
   const handleAddComment = () => {
     console.log('Comment:', comment);
-    router.push('/comments');
+    navigation.navigate('comments');
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Add Comment</Text>
+    <View style={styles3.container}>
+      <Text style={styles3.title}>Add Comment</Text>
       <TextInput
-        style={styles.input}
+        style={styles3.input}
         placeholder="Enter your comment"
         value={comment}
         onChangeText={setComment}
@@ -24,8 +21,7 @@ export default function AddCommentScreen() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
+const styles3 = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
